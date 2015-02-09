@@ -1,19 +1,19 @@
 language: node_js
 node_js:
-  - '0.10'
+- '0.10'
 before_install:
-  - npm install -g npm
-  - npm install -g bower
-  - bower install
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+- npm install -g npm
+- npm install -g bower
+- bower install
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
 script:
-  - npm run test -- karma.conf-ci.js
+- npm run test -- karma.conf-ci.js
 after_script:
-  - cat ./coverage/PhantomJS*/lcov.info | ./node_modules/codeclimate-test-reporter/bin/codeclimate.js
+- cat ./coverage/PhantomJS*/lcov.info | ./node_modules/codeclimate-test-reporter/bin/codeclimate.js
 env:
   global:
-    - secure: Za5P7EVjUZgWG92OcnSn/tOs0cHu2fKgEO8VdyFwjynoigdE2hInjHg/ed99XoNzbr3ZjHASFah9IG23BWAnO1XZk7TSiIvMW4b7OvJw+heLeX4ZxXz+2BsMC2O2XxUTdyHrjKENStfIzlR/QJbq4rGmQQbP2WfNJaQ5ShHfeLQ=
-    - secure: jNgQ9wnJTmbYzHKvUNhVHf9IdZveukUQQe89HF6fxH29vKfYs8j3f6BmK+pKVgKz+WNu+yrNRlHwSLkeQKbvVOLroBn0bStJ4ny6VB3As137KWa7Atszui3oParoi8XR7jK59faRVMYidJYov5raVh/D16owD9q6R7FObTPVCAc=
-    - secure: GlT5BGdJAuuc5ac0YdvuQDyADpIV/QMUaTXwAmYGxagim3z2Jk8gccZ8Auzj3CqWm97QzvH5w4R50X4viTTLCUa8ZB88wdOyVoHJps3A490F5Crdf/xUnAeKcN0T+iNh5rNVFwO/K992U8YsvRTY0B8wOQrqk1w69ophYG/kO0o=
-    - secure: VIHfYuvUjv6neY71PPyIM+VnKm4k/A/IXRLgohxYtCNx0t7hPiF8BFOXSUGot5I/Y+rINJwMML4h5niY/2KR+BitAk2wOV1evjOeMYPOvc1/1/R3LctGLeTu1cadbNyz6DKqKm1qHFMOEqWDtrzLJMH/wPt/YLq5Ht0yDpGpiX4=
+  - secure: Za5P7EVjUZgWG92OcnSn/tOs0cHu2fKgEO8VdyFwjynoigdE2hInjHg/ed99XoNzbr3ZjHASFah9IG23BWAnO1XZk7TSiIvMW4b7OvJw+heLeX4ZxXz+2BsMC2O2XxUTdyHrjKENStfIzlR/QJbq4rGmQQbP2WfNJaQ5ShHfeLQ=
+  - secure: jNgQ9wnJTmbYzHKvUNhVHf9IdZveukUQQe89HF6fxH29vKfYs8j3f6BmK+pKVgKz+WNu+yrNRlHwSLkeQKbvVOLroBn0bStJ4ny6VB3As137KWa7Atszui3oParoi8XR7jK59faRVMYidJYov5raVh/D16owD9q6R7FObTPVCAc=
+  - secure: Urvr2dl3iYN283qcgODJcjVV7MxQXoeBoyEkc2w5OqDQwh2QYTUDdcMY2k/3HL6k6UnL4kROUwVrpH04VhzB8lgb0HXBFtDFuBnjU4H7UkBUTkZqN6tdxLCaPyedJxaHsln2ihjx/EnfTCU6lO8xwuTy5AubQdngjiQmCduGq84=
+  - secure: du1WUJ98ZVXFxz8/0yy/bx95Vt0oI10vQciBYYdzwwjKPn3I4flv0uAcJf3hL5AM70+rEZcX6YjLlPoY/qdqwHH3GxdUPmlUGbDCtSUmHsCfHKWlACnq29YobX78l17+fK4aSTyneggMtjyqNYegcTPTBMFSA/UGOaCp6ZPkkaI=
